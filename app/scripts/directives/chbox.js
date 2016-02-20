@@ -5,9 +5,15 @@ angular
 			return {
 				restrict: 'AE',
 				template:   '<div class="inp-wrap">'  
-							+ '<label for="ch1" class="text">Launch on PC start</label>'
-							+ '<input type="checkbox" class="checkbox" id="ch1" ng-click="vm.modelReset()" ng-model="vm.l_st" ngTrueValue="true" ngFalseValue="false"></input>'
-							+ '<label for="ch1"></label>'
-							+ '</div>'
+							+ '<label for={{chId}} class="text">{{chLabel}}</label>'
+							+ '<input type="checkbox" class="checkbox" id={{chId}} ng-click="usClick()" ng-model="ngModel" ngTrueValue="true" ngFalseValue="false"></input>'
+							+ '<label for={{chId}}></label>'
+							+ '</div>',
+				scope: {
+					ngModel: '=',
+					chLabel: '@',
+					chId: '@',
+					usClick: '&'
+				}
 			}
-		})
+		});

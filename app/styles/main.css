@@ -21,6 +21,18 @@ body {
   margin:0;
   font-family: Tahoma, Geneva, sans-serif;
  }
+ 
+ h1, h3, h5 {
+	color:white;
+	font-weight:normal;
+}
+h3 {
+	text-align: center;
+}
+
+.text {
+	color: #8DA3C5;
+}
 /*------------делаем две колонки на позиционировании----- */
 .wrapper {
 	position:absolute;
@@ -63,18 +75,6 @@ body {
 	margin:auto;
 }
 
-
-h1, h3, h5 {
-	color:white;
-	font-weight:normal;
-}
-h3 {
-	text-align: center;
-}
-
-.text {
-	color: #8DA3C5;
-}
 
 /*------------стилизируем меню сайдбар---------------*/
 .menu {
@@ -135,11 +135,10 @@ hr {
 .inp-wrap .checkbox + label:after {
 	position:absolute;
 	top:0px;
-	left:5px;
+	left:6px;
 	content: "\2714";
 	color: #213140;
 	font-size:16px;
-	font-weight:bold;
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;

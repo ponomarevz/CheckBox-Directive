@@ -4,6 +4,7 @@
 	<br>
 	<h5>G E N E R A L</h5>
 	<hr>
+	<!--
 	<div class="inp-wrap">  
 		<label for="ch1" class="text">Launch on PC start</label>
 		<input type="checkbox" class="checkbox" id="ch1" ng-click="vm.modelReset()" ng-model="vm.l_st" ngTrueValue="true" ngFalseValue="false"></input>
@@ -14,6 +15,11 @@
 		<input type="checkbox" class="checkbox" id="ch2" ng-click="vm.modelReset()" ng-model="vm.l_tr" ngTrueValue="true" ngFalseValue="false"></input>
 		<label for="ch2"></label>
 	</div>
+	
+	тоже самое через дерективу (тег или атрибут) -->
+	<ng-Chbox ch-label="Launch on PC start" ch-Id="ch3" ng-model="vm.l_st" us-click="vm.modelReset()"></ng-Chbox>
+	<div ng-Chbox ch-label="Launch minimized in system tray" ch-Id="ch4" ng-model="vm.l_tr" us-click="vm.modelReset()"></div>
+	
 	<br>
 	<div class="button-wrap" ng-show="vm.isSelect()">
 		<span ng-hide="vm.isStateSave()" ng-click="vm.cancel()" class="but-cancel">C A N C E L</span>
