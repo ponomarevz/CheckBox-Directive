@@ -1,0 +1,131 @@
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: Tahoma, Geneva, sans-serif;
+ }
+/*------------делаем две колонки на позиционировании----- */
+.wrapper {
+	position:absolute;
+	box-sizing:border-box;
+	background-color:#293D4A;
+	height:100%;
+	width:100%;
+	padding-left:250px; 
+}
+
+.left-col, .right-col {
+	box-sizing:border-box;
+	padding-left: 20px;
+	padding-top:30px;
+}
+
+.left-col {
+	background-color: #293D4A;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:250px;
+	padding-left:0;
+	border-right: 2px solid #1D2937;
+	
+}
+
+.user-photo {
+	width: 80px;
+	height: 80px;
+	border-radius: 45px;
+	-webkit-border-radius: 45px;
+	-moz-border-radius: 45px;
+	background: url(../images/mrbin.jpg) no-repeat;
+	border: 6px solid #1D2937;
+	margin:auto;
+}
+
+
+h1, h3, h5 {
+	color:white;
+	font-weight:normal;
+}
+h3 {
+	text-align: center;
+}
+
+.text {
+	color: #8DA3C5;
+}
+
+/*------------стилизируем меню сайдбар---------------*/
+.menu {
+	margin:0 20px;
+	padding:0;
+	list-style: none;
+}
+.menu li {
+	line-height: 35px;
+	height: 35px;
+	vertical-align:middle;
+	padding-left:20px;
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+}
+.menu li span {
+	padding-right: 10px;
+}
+
+.menu li:hover {
+	cursor:pointer;
+	background-color:#1D2937;
+	color: white;
+}
+.activate {
+	text-decoration: none;
+	background-color:#1D2937;
+	color: white;
+}
+hr {
+	border: none; 
+    background-color: #1D2937; 
+    height: 2px; 
+	color: #1D2937;
+}
+/*--------- стилизируем инпуты--------------*/
+.inp-wrap {
+	margin:5px 10px 20px 0;
+}
+.checkbox {
+	display: none;
+}
+.checkbox + label {
+	float:right;
+	display:block;
+	border-radius:3px;
+	position:relative;
+	vertical-align: top;
+	margin: 5px;
+	width: 24px;
+	height: 24px;
+	background-color: #1D2937;
+	cursor: pointer;
+}	
+.checkbox + label:after {
+	position:absolute;
+	top:0px;
+	left:5px;
+	content: "\2714";
+	color: #213140;
+	font-size:16px;
+	font-weight:bold;
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+}
+.checkbox:checked  + label:after {
+	color: #189AC4;
+}
+
+
+
+
