@@ -12,7 +12,8 @@ angular
   .module('testZadApp', [
     'ngAnimate',
     'ngTouch',
-	'ui.router'
+	'ui.router',
+	'ngStorage'
   ])
   .config(function ($stateProvider) {
     $stateProvider
@@ -20,9 +21,19 @@ angular
 				url:'/settings',
 				views: {
 					'contentView@' : {
-						templateUrl:'views/settings.tpl.html',
+						templateUrl: 'views/settings.tpl.html',
+						controller: 'settingsCtrl',
+						controllerAs: 'vm'
+						
 					},
 				},
+				resolve: {
+					curentSet: function(setServ) {
+						return setServ.getState().then(function(res){
+							return res;
+						});
+					}
+				}
 			})
 			.state('acc', {
 				url:'/acc',

@@ -1,3 +1,20 @@
+/*-------------- анимировать переходы----------- */
+@keyframes fadeIn {
+	from { opacity: 0; transform: scale(0.7); }
+}
+
+  
+.contentView.ng-enter {
+	animation-duration: 0.7s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+	-moz-animation-duration: 0.7s;
+	-moz-animation-name: fadeIn;
+	-moz-animation-fill-mode: both;
+	-webkit-animation-duration: 0.7s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+}
 
 body {
   padding: 0;
@@ -29,9 +46,12 @@ body {
 	width:250px;
 	padding-left:0;
 	border-right: 2px solid #1D2937;
-	
 }
-
+.left-col, hr {
+	box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+	-moz-box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+	-webkit-box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+}
 .user-photo {
 	width: 80px;
 	height: 80px;
@@ -63,10 +83,12 @@ h3 {
 	list-style: none;
 }
 .menu li {
+	margin:1px 0;
 	line-height: 35px;
 	height: 35px;
 	vertical-align:middle;
 	padding-left:20px;
+	border-radius:2px;
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
@@ -95,10 +117,10 @@ hr {
 .inp-wrap {
 	margin:5px 10px 20px 0;
 }
-.checkbox {
+.inp-wrap .checkbox {
 	display: none;
 }
-.checkbox + label {
+.inp-wrap .checkbox + label {
 	float:right;
 	display:block;
 	border-radius:3px;
@@ -110,7 +132,7 @@ hr {
 	background-color: #1D2937;
 	cursor: pointer;
 }	
-.checkbox + label:after {
+.inp-wrap .checkbox + label:after {
 	position:absolute;
 	top:0px;
 	left:5px;
@@ -122,10 +144,42 @@ hr {
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 }
-.checkbox:checked  + label:after {
+.inp-wrap .checkbox:checked  + label:after {
 	color: #189AC4;
 }
-
-
+/*-------- стилизируем кнопки -------*/
+.button-wrap {
+	float:right;
+	padding-right:5px;
+}
+.button-wrap  span {
+	padding:4px 15px;
+	font-size: 10px;
+	cursor: pointer;
+	border-radius:2px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.button-wrap .but-save {
+	color:white;
+	background-color: #189AC4;
+}
+.button-wrap .but-save:hover {
+	color: #189AC4;
+	background-color: white;
+}
+.button-wrap .but-cancel {
+	color:#8DA3C5;
+}
+.button-wrap .but-cancel:hover {
+	color:#189AC4;
+	border: 1px solid #189AC4;
+}
+.save-active {
+	background: rgba(0, 0, 0, 0) !important;
+	color:#8DA3C5 !important;
+	border: 1px solid #8DA3C5 !important;
+}
 
 
