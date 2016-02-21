@@ -59,4 +59,7 @@ angular
 					}
 				}
 			})
+  })
+  .config(function($urlRouterProvider){
+	  $urlRouterProvider.when('', '/settings');
   });

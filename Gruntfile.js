@@ -8,6 +8,8 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+	
+	
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -55,6 +57,10 @@ module.exports = function (grunt) {
       gruntfile: {
         files: ['Gruntfile.js']
       },
+	  less: {
+		files: ['<%= yeoman.app %>/less/{,*/}*.less'],
+        tasks: ['less:build'] //--my less
+	  },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -269,6 +275,14 @@ module.exports = function (grunt) {
         }
       }
     },
+	//=----------------less
+	less: {
+      build: {
+        files: {
+          'app/styles/result.css': 'app/less/in.less'
+        }
+      }
+    }, //--my less
 
     // The following *-min tasks will produce minified files in the dist folder
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
@@ -421,7 +435,8 @@ module.exports = function (grunt) {
     }
   });
 
-
+	
+	 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -429,12 +444,13 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+	  'less:build',  //--my less
       'wiredep',
       'concurrent:server',
       'postcss:server',
       'connect:livereload',
-      'watch'
-    ]);
+      'watch',
+	 ]);
   });
 
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {

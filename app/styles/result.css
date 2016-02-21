@@ -1,0 +1,171 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+h1,
+h3,
+h5 {
+  color: white;
+  font-weight: normal;
+}
+h3 {
+  text-align: center;
+}
+.text {
+  color: #8DA3C5;
+}
+/*------------делаем две колонки на позиционировании----- */
+.wrapper {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #2b3f4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b3f4d), to(#3d5a6e));
+  background-image: -webkit-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: -moz-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: -o-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: linear-gradient(to bottom, #2b3f4d, #3d5a6e);
+  height: 100%;
+  width: 100%;
+  padding-left: 250px;
+}
+.left-col,
+.right-col {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.left-col {
+  background-color: #2b3f4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2b3f4d), to(#3d5a6e));
+  background-image: -webkit-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: -moz-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: -o-linear-gradient(top, #2b3f4d, #3d5a6e);
+  background-image: linear-gradient(to bottom, #2b3f4d, #3d5a6e);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding-left: 0;
+  border-right: 2px solid #1D2937;
+}
+.left-col,
+hr {
+  box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+  -moz-box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+  -webkit-box-shadow: 0 0 2px 0 #253544, inset 0 0 2px 0 #253544;
+}
+.user-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  background: url(../images/mrbin.jpg) no-repeat;
+  border: 6px solid #1D2937;
+  margin: auto;
+}
+/*------------стилизируем меню сайдбар---------------*/
+.menu {
+  margin: 0 20px;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  margin: 1px 0;
+  line-height: 35px;
+  height: 35px;
+  vertical-align: middle;
+  padding-left: 20px;
+  border-radius: 2px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+}
+.menu li span {
+  padding-right: 10px;
+}
+.menu li:hover {
+  cursor: pointer;
+  background-color: #1D2937;
+  color: white;
+}
+.activate {
+  text-decoration: none;
+  background-color: #1D2937;
+  color: white;
+}
+hr {
+  border: none;
+  background-color: #1D2937;
+  height: 2px;
+  color: #1D2937;
+}
+/*--------- стилизируем инпуты--------------*/
+.inp-wrap {
+  margin: 5px 10px 20px 0;
+}
+.inp-wrap .checkbox {
+  display: none;
+}
+.inp-wrap .checkbox + label {
+  float: right;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+  vertical-align: top;
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+  background-color: #1D2937;
+  cursor: pointer;
+}
+.inp-wrap .checkbox + label:after {
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  content: "\2714";
+  color: #213140;
+  font-size: 16px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+}
+.inp-wrap .checkbox:checked + label:after {
+  color: #189AC4;
+}
+/*-------- стилизируем кнопки -------*/
+.button-wrap {
+  float: right;
+  padding-right: 5px;
+}
+.button-wrap span {
+  padding: 4px 15px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+.button-wrap .but-save {
+  color: white;
+  background-color: #189AC4;
+}
+.button-wrap .but-save:hover {
+  color: #189AC4;
+  background-color: white;
+}
+.button-wrap .but-cancel {
+  color: #8DA3C5;
+}
+.button-wrap .but-cancel:hover {
+  color: #189AC4;
+  border: 1px solid #189AC4;
+}
+.save-active {
+  background: rgba(0, 0, 0, 0) !important;
+  color: #8DA3C5 !important;
+  border: 1px solid #8DA3C5 !important;
+}
