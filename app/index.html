@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Helo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="styles/result.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="testZadApp">
+  <body data-ng-app="testZadApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,14 +28,14 @@
 			<div class="user-photo"></div>
 			<h3>username</h3>
 			<ul class="menu text">
-				<li ui-sref="acc" ui-sref-active="activate"><span class="icon ion-ios-people"></span>My Account</li>
-				<li ui-sref="prof" ui-sref-active="activate"><span class="icon ion-ios-eye-outline"></span>My Profile</li>
-				<li ui-sref="settings" ui-sref-active="activate"><span class="icon ion-ios-browsers-outline"></span>Settings</li>
-				<li ui-sref="logout" ui-sref-active="activate"><span class="icon ion-log-out"></span>Logout</li>
-			<ul>
+				<li data-ui-sref="acc" data-ui-sref-active="activate"><span class="icon ion-ios-people"></span>My Account</li>
+				<li data-ui-sref="prof" data-ui-sref-active="activate"><span class="icon ion-ios-eye-outline"></span>My Profile</li>
+				<li data-ui-sref="settings" data-ui-sref-active="activate"><span class="icon ion-ios-browsers-outline"></span>Settings</li>
+				<li data-ui-sref="logout" data-ui-sref-active="activate"><span class="icon ion-log-out"></span>Logout</li>
+			</ul>
 		</aside>
 		<article class="right-col">
-			<div ui-view="contentView" class="contentView"></div>
+			<div data-ui-view="contentView" class="contentView"></div>
 		</article>
 	</div>
 
